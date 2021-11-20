@@ -42,8 +42,4 @@ router.get("/aslihan", (req, res) => {
   res.render("home/aslihan");
 });
 
-router.get("/login", (req, res) => {
-  res.render("login/loginPage");
-});
-
 module.exports = router;
