@@ -1,1 +1,52 @@
-All post must be here in some manner, like grid/list --> make a get Request
+<link href="public/css/admin/allPostCss.css" rel="stylesheet">
+<style>
+    .toggle.android {
+        border-radius: 0px;
+    }
+
+    .toggle.android .toggle-handle {
+        border-radius: 0px;
+    }
+</style>
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <table class="table table-image">
+                <thead>
+                    <tr>
+                        {{!-- <th scope="col">Date</th> --}}
+                        <th scope="col">Article Title</th>
+                        {{!-- <th scope="col">Words</th> --}}
+                        <th scope="col">Category</th>
+                        <th scope="col">Image</th>
+                        <th scope="col">Delete</th>
+                        <th scope="col">Update</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each posts}}
+                    <tr>
+                        {{!-- <th scope="row">{{generateTime date 'MMMM Do YYYY'}}</th> --}}
+                        <td>{{title}}</td>
+                        {{!-- <td>
+                            <span class="d-inline-block text-truncate" style="max-width: 150px;">{{body}}</span>
+                        </td> --}}
+                        <td>{{label}}</td>
+                        <td class="w-25">
+                            <img src="/uploads/{{file}}" class="img-fluid img-thumbnail" alt="Sheep">
+                        </td>
+                        <td>
+                            <form action="/admin/posts/{{id}}?_method=DELETE" method="post">
+                                <button type="submit" class="btn btn-danger">DELETE</button>
+                            </form>
+                        </td>
+                        <td><a href="/admin/posts/edit/{{id}}" class="btn btn-info">UPDATE</a></td>
+                        <td>
+                        </td>
+                    </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+        </div>
+    </div>>
+</div>

@@ -1,4 +1,8 @@
-<h1>FUCK YOU</h1>
+{{#each posts}}
+<div style="width:100%">
+    <h1>{{title}}</h1>
+    <p>{{body}}</p><a href="/post/{{id}}">Continue...</a>
+    <img src="/uploads/{{file}}" class="img-fluid img-thumbnail" alt="Sheep" style="margin-bottom:13%">
 
-
-<h1>GO BACK !!!</h1>
+</div>
+{{/each}}
